@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ParticleSwarmOptimizer &mdash; AMOFMS 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=eafc0fe6" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=8d563738"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="SimplexOptimizer" href="Optimization.SimplexOptimizer.html" />
+    <link rel="prev" title="Particle" href="Optimization.Particle.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            AMOFMS
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../example.html">Example</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../API.html">API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../src/FGMappingToCG.html">FGMappingToCG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../src/CGPropertiesFromFGSimulation.html">CGPropertiesFromFGSimulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../src/CGForceFieldParameters.html">CGForceFieldParameters module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../src/ObjectiveFunction.html">ObjectiveFunction</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../src/Optimization.html">Optimization</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../src/Optimization.html#module-Optimization">Optimization Module</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../src/Optimization.html#functions">Functions</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../src/Optimization.html#classes">Classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../src/Optimization.html#class-inheritance-diagram">Class Inheritance Diagram</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../src/tools.html">tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../src/DSPGM_MARTINI2.html">DSPGM_MARTINI2</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../authors.html">Authors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">CHANGELOG</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AMOFMS</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../API.html">API</a></li>
+          <li class="breadcrumb-item"><a href="../src/Optimization.html">Optimization</a></li>
+      <li class="breadcrumb-item active">ParticleSwarmOptimizer</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/Optimization.ParticleSwarmOptimizer.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="particleswarmoptimizer">
+<h1>ParticleSwarmOptimizer<a class="headerlink" href="#particleswarmoptimizer" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="Optimization.ParticleSwarmOptimizer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Optimization.</span></span><span class="sig-name descname"><span class="pre">ParticleSwarmOptimizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">objective_function</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bounds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">update_boundary_frequency</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">converged_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_particles</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_iter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Optimization.ParticleSwarmOptimizer" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Implements the Particle Swarm Optimization (PSO) algorithm for finding the minimum of an objective function in a multi-dimensional space.</p>
+<section id="attributes">
+<h2>Attributes:<a class="headerlink" href="#attributes" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>objective_function<span class="classifier">callable</span></dt><dd><p>The objective function to be minimized.</p>
+</dd>
+<dt>bounds<span class="classifier">list of tuples</span></dt><dd><p>Defines the search space through a list of tuples, where each tuple (low, high) represents the bounds for a parameter.</p>
+</dd>
+<dt>num_particles<span class="classifier">int</span></dt><dd><p>The number of particles in the swarm.</p>
+</dd>
+<dt>max_iter<span class="classifier">int</span></dt><dd><p>The maximum number of iterations to run the optimization.</p>
+</dd>
+<dt>converged_threshold<span class="classifier">float</span></dt><dd><p>The convergence threshold; optimization stops if changes in the global best score are below this threshold.</p>
+</dd>
+<dt>recorder<span class="classifier">LossRecorder</span></dt><dd><p>An instance of the LossRecorder class to track the loss values and optimization parameters over iterations.</p>
+</dd>
+<dt>iter<span class="classifier">int</span></dt><dd><p>The current iteration number.</p>
+</dd>
+<dt>options<span class="classifier">dict</span></dt><dd><p>Configuration options for PSO, including inertia weight and acceleration coefficients.</p>
+</dd>
+</dl>
+</section>
+<section id="methods">
+<h2>Methods:<a class="headerlink" href="#methods" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>update_inertia_weight(self, iter)</dt><dd><p>Adjusts the inertia weight based on the current iteration, facilitating control over exploration and exploitation.</p>
+</dd>
+<dt>adaptive_bounds(self, current_iter)</dt><dd><p>Dynamically adjusts the search space bounds based on the location of the global best position to encourage exploration.</p>
+</dd>
+<dt>optimize(self, opt_folder=None)</dt><dd><p>Executes the PSO algorithm, updating particles’ positions and velocities over iterations to minimize the objective function.</p>
+</dd>
+</dl>
+<p class="rubric">Methods Summary</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#Optimization.ParticleSwarmOptimizer.adaptive_bounds" title="Optimization.ParticleSwarmOptimizer.adaptive_bounds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">adaptive_bounds</span></code></a>(current_iter)</p></td>
+<td><p>Adjusts the search space bounds dynamically based on the global best position to encourage exploration and avoid stagnation.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#Optimization.ParticleSwarmOptimizer.optimize" title="Optimization.ParticleSwarmOptimizer.optimize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">optimize</span></code></a>([opt_folder])</p></td>
+<td><p>Executes the Particle Swarm Optimization (PSO) algorithm.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#Optimization.ParticleSwarmOptimizer.optimize_mpi" title="Optimization.ParticleSwarmOptimizer.optimize_mpi"><code class="xref py py-obj docutils literal notranslate"><span class="pre">optimize_mpi</span></code></a>(max_processes[, opt_folder])</p></td>
+<td><p>Executes the PSO algorithm in parallel using multiple processes.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#Optimization.ParticleSwarmOptimizer.update_inertia_weight" title="Optimization.ParticleSwarmOptimizer.update_inertia_weight"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_inertia_weight</span></code></a>(iter)</p></td>
+<td><p>Dynamically adjusts the inertia weight based on the current iteration to balance global and local exploration.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods Documentation</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Optimization.ParticleSwarmOptimizer.adaptive_bounds">
+<span class="sig-name descname"><span class="pre">adaptive_bounds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">current_iter</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Optimization.ParticleSwarmOptimizer.adaptive_bounds" title="Link to this definition"></a></dt>
+<dd><p>Adjusts the search space bounds dynamically based on the global best position to encourage exploration and avoid stagnation.</p>
+<section id="parameters">
+<h3>Parameters:<a class="headerlink" href="#parameters" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>current_iter<span class="classifier">int</span></dt><dd><p>The current iteration number.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Optimization.ParticleSwarmOptimizer.optimize">
+<span class="sig-name descname"><span class="pre">optimize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">opt_folder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Optimization.ParticleSwarmOptimizer.optimize" title="Link to this definition"></a></dt>
+<dd><p>Executes the Particle Swarm Optimization (PSO) algorithm. It iteratively updates the particles’ positions and velocities,
+aiming to find the global minimum of the objective function within the defined bounds.</p>
+<section id="id1">
+<h3>Parameters:<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>opt_folder<span class="classifier">str, optional</span></dt><dd><p>The directory where optimization artifacts, such as iteration logs, can be saved. If not provided, these artifacts are not saved.</p>
+</dd>
+</dl>
+</section>
+<section id="returns">
+<h3>Returns:<a class="headerlink" href="#returns" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>tuple</dt><dd><p>A tuple containing the global best position (numpy.ndarray) found by the optimizer, the objective function value at this position (float),
+and an instance of LossRecorder with recorded losses and optimization parameters (LossRecorder).</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Optimization.ParticleSwarmOptimizer.optimize_mpi">
+<span class="sig-name descname"><span class="pre">optimize_mpi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_processes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opt_folder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Optimization.ParticleSwarmOptimizer.optimize_mpi" title="Link to this definition"></a></dt>
+<dd><p>Executes the PSO algorithm in parallel using multiple processes. This method aims to optimize the objective function
+by adjusting particles’ positions and velocities across the search space, leveraging multiprocessing to expedite
+the computation of the objective function for each particle.</p>
+<section id="id2">
+<h3>Parameters:<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>max_processes<span class="classifier">int</span></dt><dd><p>The maximum number of worker processes to use for parallel computation. This should not exceed the number of
+available CPU cores for optimal performance.</p>
+</dd>
+<dt>opt_folder<span class="classifier">str, optional</span></dt><dd><p>The directory where optimization artifacts (e.g., logs, intermediate results) will be stored. If not specified,
+these artifacts are not saved.</p>
+</dd>
+</dl>
+</section>
+<section id="id3">
+<h3>Returns:<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>tuple</dt><dd><p>Returns a tuple containing the global best position found, the corresponding objective function value at this
+position, and an instance of the LossRecorder with recorded losses and optimization parameters.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Optimization.ParticleSwarmOptimizer.update_inertia_weight">
+<span class="sig-name descname"><span class="pre">update_inertia_weight</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iter</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Optimization.ParticleSwarmOptimizer.update_inertia_weight" title="Link to this definition"></a></dt>
+<dd><p>Dynamically adjusts the inertia weight based on the current iteration to balance global and local exploration.</p>
+<section id="id4">
+<h3>Parameters:<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>iter<span class="classifier">int</span></dt><dd><p>The current iteration number.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Optimization.Particle.html" class="btn btn-neutral float-left" title="Particle" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Optimization.SimplexOptimizer.html" class="btn btn-neutral float-right" title="SimplexOptimizer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Drep Zhong.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GeneticOptimizer &mdash; AMOFMS 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=eafc0fe6" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=8d563738"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="LossRecorder" href="Optimization.LossRecorder.html" />
+    <link rel="prev" title="BayesianOptimizer" href="Optimization.BayesianOptimizer.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            AMOFMS
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../example.html">Example</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../API.html">API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../src/FGMappingToCG.html">FGMappingToCG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../src/CGPropertiesFromFGSimulation.html">CGPropertiesFromFGSimulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../src/CGForceFieldParameters.html">CGForceFieldParameters module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../src/ObjectiveFunction.html">ObjectiveFunction</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../src/Optimization.html">Optimization</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../src/Optimization.html#module-Optimization">Optimization Module</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../src/Optimization.html#functions">Functions</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../src/Optimization.html#classes">Classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../src/Optimization.html#class-inheritance-diagram">Class Inheritance Diagram</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../src/tools.html">tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../src/DSPGM_MARTINI2.html">DSPGM_MARTINI2</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../authors.html">Authors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">CHANGELOG</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AMOFMS</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../API.html">API</a></li>
+          <li class="breadcrumb-item"><a href="../src/Optimization.html">Optimization</a></li>
+      <li class="breadcrumb-item active">GeneticOptimizer</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/Optimization.GeneticOptimizer.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="geneticoptimizer">
+<h1>GeneticOptimizer<a class="headerlink" href="#geneticoptimizer" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="Optimization.GeneticOptimizer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Optimization.</span></span><span class="sig-name descname"><span class="pre">GeneticOptimizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">objective_function</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bounds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">population_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mutation_rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crossover_rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_generations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Optimization.GeneticOptimizer" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Implements a Genetic Algorithm (GA) for optimization. GA mimics the process of natural selection by creating a population of solutions, applying operators such as selection, crossover, and mutation, and evolving the population over generations.</p>
+<section id="attributes">
+<h2>Attributes:<a class="headerlink" href="#attributes" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>objective_function<span class="classifier">callable</span></dt><dd><p>The objective function to be minimized.</p>
+</dd>
+<dt>bounds<span class="classifier">list of tuples</span></dt><dd><p>The bounds for each dimension of the search space, where each tuple contains the lower and upper limits.</p>
+</dd>
+<dt>method<span class="classifier">str, optional</span></dt><dd><p>Specifies the method for ensuring diversity or handling specific optimization strategies. For example, ‘Elitism’ ensures the best individuals are carried to the next generation.</p>
+</dd>
+<dt>population_size<span class="classifier">int</span></dt><dd><p>The number of individuals in the population.</p>
+</dd>
+<dt>mutation_rate<span class="classifier">float</span></dt><dd><p>The probability of an individual gene mutating.</p>
+</dd>
+<dt>crossover_rate<span class="classifier">float</span></dt><dd><p>The probability of crossover between two individuals.</p>
+</dd>
+<dt>max_generations<span class="classifier">int</span></dt><dd><p>The maximum number of generations to evolve the population.</p>
+</dd>
+<dt>recorder<span class="classifier">LossRecorder</span></dt><dd><p>Records and retrieves various metrics throughout the optimization process.</p>
+</dd>
+</dl>
+</section>
+<section id="methods">
+<h2>Methods:<a class="headerlink" href="#methods" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>initialize_population()</dt><dd><p>Initializes the population with random individuals within the specified bounds.</p>
+</dd>
+<dt>calculate_fitness(population)</dt><dd><p>Evaluates and returns the fitness (objective function value) of each individual in the population.</p>
+</dd>
+<dt>select(population, fitness_scores)</dt><dd><p>Selects individuals from the current population to breed a new generation, based on their fitness scores.</p>
+</dd>
+<dt>crossover(parent1, parent2)</dt><dd><p>Combines two individuals (parents) to produce offspring for the next generation.</p>
+</dd>
+<dt>mutate(individual)</dt><dd><p>Applies random mutations to an individual’s genes.</p>
+</dd>
+<dt>optimize()</dt><dd><p>Executes the genetic algorithm, returning the best solution found.</p>
+</dd>
+</dl>
+<p class="rubric">Methods Summary</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#Optimization.GeneticOptimizer.calculate_fitness" title="Optimization.GeneticOptimizer.calculate_fitness"><code class="xref py py-obj docutils literal notranslate"><span class="pre">calculate_fitness</span></code></a>(population)</p></td>
+<td><p>Calculates the fitness of each individual in the population by evaluating the objective function.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#Optimization.GeneticOptimizer.crossover" title="Optimization.GeneticOptimizer.crossover"><code class="xref py py-obj docutils literal notranslate"><span class="pre">crossover</span></code></a>(parent1, parent2[, strategy])</p></td>
+<td><p>Performs crossover between two parents to produce offspring for the next generation.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#Optimization.GeneticOptimizer.initialize_population" title="Optimization.GeneticOptimizer.initialize_population"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initialize_population</span></code></a>()</p></td>
+<td><p>Creates an initial population of random solutions within the defined search space bounds.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#Optimization.GeneticOptimizer.mutate" title="Optimization.GeneticOptimizer.mutate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mutate</span></code></a>(individual)</p></td>
+<td><p>Applies mutation to an individual's genes with a specified probability.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#Optimization.GeneticOptimizer.optimize" title="Optimization.GeneticOptimizer.optimize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">optimize</span></code></a>()</p></td>
+<td><p>Executes the genetic algorithm, iterating over generations to find the best solution.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#Optimization.GeneticOptimizer.select" title="Optimization.GeneticOptimizer.select"><code class="xref py py-obj docutils literal notranslate"><span class="pre">select</span></code></a>(population, fitness_scores)</p></td>
+<td><p>Selects individuals from the current population to be parents for the next generation, based on their fitness scores.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods Documentation</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Optimization.GeneticOptimizer.calculate_fitness">
+<span class="sig-name descname"><span class="pre">calculate_fitness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">population</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Optimization.GeneticOptimizer.calculate_fitness" title="Link to this definition"></a></dt>
+<dd><p>Calculates the fitness of each individual in the population by evaluating the objective function.</p>
+<section id="parameters">
+<h3>Parameters:<a class="headerlink" href="#parameters" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>population<span class="classifier">list</span></dt><dd><p>The current population of individuals.</p>
+</dd>
+</dl>
+</section>
+<section id="returns">
+<h3>Returns:<a class="headerlink" href="#returns" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>list</dt><dd><p>A list of fitness scores corresponding to each individual in the population.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Optimization.GeneticOptimizer.crossover">
+<span class="sig-name descname"><span class="pre">crossover</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strategy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'single_point'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Optimization.GeneticOptimizer.crossover" title="Link to this definition"></a></dt>
+<dd><p>Performs crossover between two parents to produce offspring for the next generation.</p>
+<section id="id1">
+<h3>Parameters:<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>parent1<span class="classifier">list</span></dt><dd><p>The first parent individual.</p>
+</dd>
+<dt>parent2<span class="classifier">list</span></dt><dd><p>The second parent individual.</p>
+</dd>
+</dl>
+</section>
+<section id="id2">
+<h3>Returns:<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>tuple</dt><dd><p>A tuple containing two offspring individuals resulting from the crossover.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Optimization.GeneticOptimizer.initialize_population">
+<span class="sig-name descname"><span class="pre">initialize_population</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Optimization.GeneticOptimizer.initialize_population" title="Link to this definition"></a></dt>
+<dd><p>Creates an initial population of random solutions within the defined search space bounds.</p>
+<section id="id3">
+<h3>Returns:<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>list</dt><dd><p>A list of individuals, where each individual is represented as a list of parameter values.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Optimization.GeneticOptimizer.mutate">
+<span class="sig-name descname"><span class="pre">mutate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">individual</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Optimization.GeneticOptimizer.mutate" title="Link to this definition"></a></dt>
+<dd><p>Applies mutation to an individual’s genes with a specified probability.</p>
+<section id="id4">
+<h3>Parameters:<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>individual<span class="classifier">list</span></dt><dd><p>The individual to mutate.</p>
+</dd>
+</dl>
+</section>
+<section id="id5">
+<h3>Returns:<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>list</dt><dd><p>The mutated individual.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Optimization.GeneticOptimizer.optimize">
+<span class="sig-name descname"><span class="pre">optimize</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Optimization.GeneticOptimizer.optimize" title="Link to this definition"></a></dt>
+<dd><p>Executes the genetic algorithm, iterating over generations to find the best solution.</p>
+<section id="id6">
+<h3>Returns:<a class="headerlink" href="#id6" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>tuple</dt><dd><p>The best solution found and its objective function value.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Optimization.GeneticOptimizer.select">
+<span class="sig-name descname"><span class="pre">select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">population</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fitness_scores</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Optimization.GeneticOptimizer.select" title="Link to this definition"></a></dt>
+<dd><p>Selects individuals from the current population to be parents for the next generation, based on their fitness scores.</p>
+<section id="id7">
+<h3>Parameters:<a class="headerlink" href="#id7" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>population<span class="classifier">list</span></dt><dd><p>The current population of individuals.</p>
+</dd>
+<dt>fitness_scores<span class="classifier">list</span></dt><dd><p>The fitness scores for each individual in the population.</p>
+</dd>
+</dl>
+</section>
+<section id="id8">
+<h3>Returns:<a class="headerlink" href="#id8" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>list</dt><dd><p>A list of selected individuals to be parents for the next generation.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Optimization.BayesianOptimizer.html" class="btn btn-neutral float-left" title="BayesianOptimizer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Optimization.LossRecorder.html" class="btn btn-neutral float-right" title="LossRecorder" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Drep Zhong.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ComputeCGPropertiesFromFGSimulation_All &mdash; AMOFMS 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=eafc0fe6" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=8d563738"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="CGForceFieldParameters module" href="../src/CGForceFieldParameters.html" />
+    <link rel="prev" title="ComputeCGPropertiesFromFGSimulation" href="CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            AMOFMS
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../example.html">Example</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../API.html">API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../src/FGMappingToCG.html">FGMappingToCG</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../src/CGPropertiesFromFGSimulation.html">CGPropertiesFromFGSimulation</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../src/CGPropertiesFromFGSimulation.html#module-CGPropertiesFromFGSimulation">CGPropertiesFromFGSimulation Module</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../src/CGPropertiesFromFGSimulation.html#functions">Functions</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../src/CGPropertiesFromFGSimulation.html#classes">Classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../src/CGPropertiesFromFGSimulation.html#class-inheritance-diagram">Class Inheritance Diagram</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../src/CGForceFieldParameters.html">CGForceFieldParameters module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../src/ObjectiveFunction.html">ObjectiveFunction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../src/Optimization.html">Optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../src/tools.html">tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../src/DSPGM_MARTINI2.html">DSPGM_MARTINI2</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../authors.html">Authors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">CHANGELOG</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AMOFMS</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../API.html">API</a></li>
+          <li class="breadcrumb-item"><a href="../src/CGPropertiesFromFGSimulation.html">CGPropertiesFromFGSimulation</a></li>
+      <li class="breadcrumb-item active">ComputeCGPropertiesFromFGSimulation_All</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation_All.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="computecgpropertiesfromfgsimulation-all">
+<h1>ComputeCGPropertiesFromFGSimulation_All<a class="headerlink" href="#computecgpropertiesfromfgsimulation-all" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation_All">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">CGPropertiesFromFGSimulation.</span></span><span class="sig-name descname"><span class="pre">ComputeCGPropertiesFromFGSimulation_All</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">topology</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trajectory</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system_top</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation_All" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Computes Coarse-Grained (CG) properties from Fine-Grained (FG) simulation data for an entire system.</p>
+<p>This class is designed to handle multiple molecule types and calculate CG properties,
+such as centroids and forces, for all molecules present in the simulation. It supports
+operations on the entire system, making it suitable for analyses that require a global
+perspective of the simulation data.</p>
+<section id="attributes">
+<h2>Attributes:<a class="headerlink" href="#attributes" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>topology<span class="classifier">str</span></dt><dd><p>Path to the topology file.</p>
+</dd>
+<dt>trajectory<span class="classifier">str</span></dt><dd><p>Path to the trajectory file.</p>
+</dd>
+<dt>system_top<span class="classifier">dict</span></dt><dd><p>A dictionary representing the system’s topology, including information about molecules.</p>
+</dd>
+<dt>molecules<span class="classifier">list</span></dt><dd><p>A list containing dictionaries for each molecule type in the system.</p>
+</dd>
+<dt>universe<span class="classifier">MDAnalysis.Universe</span></dt><dd><p>The Universe object containing loaded simulation data.</p>
+</dd>
+</dl>
+</section>
+<section id="methods">
+<h2>Methods:<a class="headerlink" href="#methods" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>__init__(self, topology, trajectory, system_top)</dt><dd><p>Constructor to initialize the class with simulation and system topology data.</p>
+</dd>
+<dt>get_num_frames(self)</dt><dd><p>Returns the number of frames in the trajectory.</p>
+</dd>
+<dt>compute_centroid(self, atom_group)</dt><dd><p>Computes the centroid (center of mass) for a given atom group.</p>
+</dd>
+<dt>compute_all_fg_group_force(self, fg_resname_list=None, frame_id=0)</dt><dd><p>Computes forces for all FG groups in the system at a specified frame.</p>
+</dd>
+<dt>save_cg_coord_from_fg(self, save_file=’cg.gro’, fg_resname_list=None, save_molecule_list=None, frame_id=-1, method=’com’, cg_wrap=False)</dt><dd><p>Saves the CG coordinates derived from FG data to a file.</p>
+</dd>
+</dl>
+<p class="rubric">Methods Summary</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation_All.compute_all_fg_group_force" title="CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation_All.compute_all_fg_group_force"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_all_fg_group_force</span></code></a>([...])</p></td>
+<td><p>Computes the forces acting on all FG groups within the system for a specified frame.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation_All.compute_centroid" title="CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation_All.compute_centroid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_centroid</span></code></a>(atom_group)</p></td>
+<td><p>Computes the centroid (center of mass) of a specified atom group.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation_All.get_num_frames" title="CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation_All.get_num_frames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_num_frames</span></code></a>()</p></td>
+<td><p>Returns the total number of frames in the trajectory.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation_All.save_cg_coord_from_fg" title="CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation_All.save_cg_coord_from_fg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_cg_coord_from_fg</span></code></a>([save_file, ...])</p></td>
+<td><p>Saves CG coordinates, derived from FG simulation data, to a specified file.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods Documentation</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation_All.compute_all_fg_group_force">
+<span class="sig-name descname"><span class="pre">compute_all_fg_group_force</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fg_resname_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation_All.compute_all_fg_group_force" title="Link to this definition"></a></dt>
+<dd><p>Computes the forces acting on all FG groups within the system for a specified frame.</p>
+<section id="parameters">
+<h3>Parameters:<a class="headerlink" href="#parameters" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>fg_resname_list<span class="classifier">list of str, optional</span></dt><dd><p>A list of residue names corresponding to the FG groups. If None, the molecule names from system_top are used.</p>
+</dd>
+<dt>frame_id<span class="classifier">int, optional</span></dt><dd><p>The frame index at which to compute the forces. Default is 0.</p>
+</dd>
+</dl>
+</section>
+<section id="returns">
+<h3>Returns:<a class="headerlink" href="#returns" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>dict</dt><dd><p>A dictionary with molecule names as keys and numpy arrays of forces as values.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation_All.compute_centroid">
+<span class="sig-name descname"><span class="pre">compute_centroid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atom_group</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation_All.compute_centroid" title="Link to this definition"></a></dt>
+<dd><p>Computes the centroid (center of mass) of a specified atom group.</p>
+<section id="id1">
+<h3>Parameters:<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>atom_group<span class="classifier">MDAnalysis.core.groups.AtomGroup</span></dt><dd><p>The atom group for which to compute the centroid.</p>
+</dd>
+</dl>
+</section>
+<section id="id2">
+<h3>Returns:<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>np.ndarray</dt><dd><p>The x, y, z coordinates of the centroid.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation_All.get_num_frames">
+<span class="sig-name descname"><span class="pre">get_num_frames</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation_All.get_num_frames" title="Link to this definition"></a></dt>
+<dd><p>Returns the total number of frames in the trajectory.</p>
+<section id="id3">
+<h3>Returns:<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>int</dt><dd><p>The number of frames in the trajectory.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation_All.save_cg_coord_from_fg">
+<span class="sig-name descname"><span class="pre">save_cg_coord_from_fg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">save_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cg.gro'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fg_resname_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_molecule_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'com'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cg_wrap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation_All.save_cg_coord_from_fg" title="Link to this definition"></a></dt>
+<dd><p>Saves CG coordinates, derived from FG simulation data, to a specified file.</p>
+<section id="id4">
+<h3>Parameters:<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>save_file<span class="classifier">str, optional</span></dt><dd><p>The name of the file to save the CG coordinates to. Default is ‘cg.gro’.</p>
+</dd>
+<dt>fg_resname_list<span class="classifier">list of str, optional</span></dt><dd><p>A list of residue names to use instead of molecule names. Default is None.</p>
+</dd>
+<dt>save_molecule_list<span class="classifier">list of int, optional</span></dt><dd><p>A list of indices specifying which molecules to save. Default is None (save all).</p>
+</dd>
+<dt>frame_id<span class="classifier">int, optional</span></dt><dd><p>The frame index from which to save the CG coordinates. Default is -1 (last frame).</p>
+</dd>
+<dt>method<span class="classifier">str, optional</span></dt><dd><p>The method to compute CG coordinates (‘com’ for center of mass, ‘cog’ for center of geometry). Default is ‘com’.</p>
+</dd>
+<dt>cg_wrap<span class="classifier">bool, optional</span></dt><dd><p>Whether to wrap the coordinates back into the simulation box. Default is False.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation.html" class="btn btn-neutral float-left" title="ComputeCGPropertiesFromFGSimulation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../src/CGForceFieldParameters.html" class="btn btn-neutral float-right" title="CGForceFieldParameters module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Drep Zhong.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

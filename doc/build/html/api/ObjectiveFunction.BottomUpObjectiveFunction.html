@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BottomUpObjectiveFunction &mdash; AMOFMS 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=eafc0fe6" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=8d563738"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Optimization" href="../src/Optimization.html" />
+    <link rel="prev" title="main" href="ObjectiveFunction.main.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            AMOFMS
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../example.html">Example</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../API.html">API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../src/FGMappingToCG.html">FGMappingToCG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../src/CGPropertiesFromFGSimulation.html">CGPropertiesFromFGSimulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../src/CGForceFieldParameters.html">CGForceFieldParameters module</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../src/ObjectiveFunction.html">ObjectiveFunction</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../src/ObjectiveFunction.html#module-ObjectiveFunction">ObjectiveFunction Module</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../src/ObjectiveFunction.html#functions">Functions</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../src/ObjectiveFunction.html#classes">Classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../src/ObjectiveFunction.html#class-inheritance-diagram">Class Inheritance Diagram</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../src/Optimization.html">Optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../src/tools.html">tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../src/DSPGM_MARTINI2.html">DSPGM_MARTINI2</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../authors.html">Authors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">CHANGELOG</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AMOFMS</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../API.html">API</a></li>
+          <li class="breadcrumb-item"><a href="../src/ObjectiveFunction.html">ObjectiveFunction</a></li>
+      <li class="breadcrumb-item active">BottomUpObjectiveFunction</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/ObjectiveFunction.BottomUpObjectiveFunction.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="bottomupobjectivefunction">
+<h1>BottomUpObjectiveFunction<a class="headerlink" href="#bottomupobjectivefunction" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="ObjectiveFunction.BottomUpObjectiveFunction">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ObjectiveFunction.</span></span><span class="sig-name descname"><span class="pre">BottomUpObjectiveFunction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">system_top</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fg_topology</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fg_trajectory</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opt_folder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cg_top_file_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cg.top'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pdb_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ObjectiveFunction.BottomUpObjectiveFunction" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Defines the bottom-up approach for optimizing Coarse-Grained (CG) models based on Fine-Grained (FG) simulation data.</p>
+<p>This class is responsible for managing the overall process of converting FG simulation data into a CG model,
+running CG simulations, and evaluating the performance of the CG model through various objective functions.</p>
+<section id="attributes">
+<h2>Attributes:<a class="headerlink" href="#attributes" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>system_top<span class="classifier">dict</span></dt><dd><p>The system topology information derived from the FG simulation.</p>
+</dd>
+<dt>molecules<span class="classifier">list</span></dt><dd><p>A list of dictionaries, each representing a molecule in the system.</p>
+</dd>
+<dt>molecule_list<span class="classifier">list</span></dt><dd><p>A list of molecule names present in the system.</p>
+</dd>
+<dt>pdb_file<span class="classifier">str, optional</span></dt><dd><p>Path to the PDB file, if available.</p>
+</dd>
+<dt>fg_topology<span class="classifier">str</span></dt><dd><p>Path to the FG topology file.</p>
+</dd>
+<dt>fg_trajectory<span class="classifier">str</span></dt><dd><p>Path to the FG trajectory file.</p>
+</dd>
+<dt>cg_topology<span class="classifier">str, optional</span></dt><dd><p>Path to the generated CG topology file, initialized as None.</p>
+</dd>
+<dt>cg_trajectory<span class="classifier">str, optional</span></dt><dd><p>Path to the CG trajectory file, initialized as None.</p>
+</dd>
+<dt>opt_folder<span class="classifier">str</span></dt><dd><p>Path to the optimization folder where results and intermediate files are stored.</p>
+</dd>
+<dt>cg_top_folder<span class="classifier">str</span></dt><dd><p>Path to the folder containing the CG topology files.</p>
+</dd>
+<dt>cg_top_file<span class="classifier">str</span></dt><dd><p>Path to the CG topology file.</p>
+</dd>
+</dl>
+</section>
+<section id="methods">
+<h2>Methods:<a class="headerlink" href="#methods" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>__init__(self, system_top, fg_topology, fg_trajectory, opt_folder, cg_top_file_name=’cg.top’, pdb_file=None)</dt><dd><p>Initializes the class with system topology, FG simulation data, and optimization settings.</p>
+</dd>
+<dt>update_system_topology(self, new_system_top)</dt><dd><p>Updates the system topology information.</p>
+</dd>
+<dt>update_opt_folder(self, new_opt_folder)</dt><dd><p>Updates the optimization folder path and related settings.</p>
+</dd>
+<dt>force_match_loss(self, cg_mdp_file, fg_resname_list=None, begin_frame=None, end_frame=None, skip_frame=None)</dt><dd><p>Calculates the force matching loss between FG and CG simulations.</p>
+</dd>
+<dt>run_cg_simulation(self, mdp_folder, initial_gro=None, fg_resname_list=None, index_file=None, cg_simulation_folder=None, table_file=None, gpu_acceleration=True, em_double_version=True, em=True, anneal=True, eq=True, prod=True, nt=8, gpu_id=0)</dt><dd><p>Runs the CG simulation based on the provided settings and updates the CG trajectory and topology paths.</p>
+</dd>
+<dt>Boltzmann_inversion(self, rdf_pairs_list, tag, max_distance, rdf_folder=None, begin_frame_id=None, end_frame_id=None, skip_frames=None, Temperature=300, bin_width=0.002)</dt><dd><p>Performs Boltzmann inversion based on the Radial Distribution Function (RDF) to derive potential functions.</p>
+</dd>
+</dl>
+<p class="rubric">Methods Summary</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ObjectiveFunction.BottomUpObjectiveFunction.Boltzmann_inversion" title="ObjectiveFunction.BottomUpObjectiveFunction.Boltzmann_inversion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Boltzmann_inversion</span></code></a>(rdf_pairs_list, tag, ...)</p></td>
+<td><p>Performs the Boltzmann inversion method based on Radial Distribution Function (RDF) analysis to derive potential functions.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ObjectiveFunction.BottomUpObjectiveFunction.force_match_loss" title="ObjectiveFunction.BottomUpObjectiveFunction.force_match_loss"><code class="xref py py-obj docutils literal notranslate"><span class="pre">force_match_loss</span></code></a>(cg_mdp_file[, ...])</p></td>
+<td><p>Calculates the force matching loss between FG and CG simulations for a range of frames.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ObjectiveFunction.BottomUpObjectiveFunction.run_cg_simulation" title="ObjectiveFunction.BottomUpObjectiveFunction.run_cg_simulation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run_cg_simulation</span></code></a>(mdp_folder[, initial_gro, ...])</p></td>
+<td><p>Runs the CG simulation process, including energy minimization, annealing, equilibration, and production phases.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ObjectiveFunction.BottomUpObjectiveFunction.update_opt_folder" title="ObjectiveFunction.BottomUpObjectiveFunction.update_opt_folder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_opt_folder</span></code></a>(new_opt_folder)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ObjectiveFunction.BottomUpObjectiveFunction.update_system_topology" title="ObjectiveFunction.BottomUpObjectiveFunction.update_system_topology"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_system_topology</span></code></a>(new_system_top)</p></td>
+<td><p>Updates the system topology with new information and regenerates the CG topology file.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods Documentation</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ObjectiveFunction.BottomUpObjectiveFunction.Boltzmann_inversion">
+<span class="sig-name descname"><span class="pre">Boltzmann_inversion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rdf_pairs_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_distance</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rdf_folder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">begin_frame_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_frame_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skip_frames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Temperature</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">300</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bin_width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.002</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ObjectiveFunction.BottomUpObjectiveFunction.Boltzmann_inversion" title="Link to this definition"></a></dt>
+<dd><p>Performs the Boltzmann inversion method based on Radial Distribution Function (RDF) analysis to derive potential functions.</p>
+<section id="parameters">
+<h3>Parameters:<a class="headerlink" href="#parameters" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>rdf_pairs_list<span class="classifier">list</span></dt><dd><p>A list of dictionaries, each specifying the atom groups for RDF calculation.</p>
+</dd>
+<dt>tag<span class="classifier">str</span></dt><dd><p>Specifies whether to perform the calculation for the ‘cg’ (Coarse-Grained) or ‘fg’ (Fine-Grained) model.</p>
+</dd>
+<dt>max_distance<span class="classifier">float</span></dt><dd><p>The maximum distance for the RDF calculation.</p>
+</dd>
+<dt>rdf_folder<span class="classifier">str, optional</span></dt><dd><p>Path to save the RDF data, a default folder will be created if not provided.</p>
+</dd>
+<dt>begin_frame_id<span class="classifier">int, optional</span></dt><dd><p>The starting frame for RDF calculation, defaults to None (start from the first frame).</p>
+</dd>
+<dt>end_frame_id<span class="classifier">int, optional</span></dt><dd><p>The ending frame for RDF calculation, defaults to None (end at the last frame).</p>
+</dd>
+<dt>skip_frames<span class="classifier">int, optional</span></dt><dd><p>The number of frames to skip between evaluations, defaults to None (no skipping).</p>
+</dd>
+<dt>Temperature<span class="classifier">float, optional</span></dt><dd><p>Temperature for the Boltzmann inversion calculation, defaults to 300 K.</p>
+</dd>
+<dt>bin_width<span class="classifier">float, optional</span></dt><dd><p>The width of the bins for RDF calculation, defaults to 0.002 nm.</p>
+</dd>
+</dl>
+</section>
+<section id="returns">
+<h3>Returns:<a class="headerlink" href="#returns" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>list</dt><dd><p>A list of potential energy functions derived from the RDF analysis for each pair of atom groups.</p>
+</dd>
+</dl>
+</section>
+<section id="notes">
+<h3>Notes:<a class="headerlink" href="#notes" title="Link to this heading"></a></h3>
+<p>This method calculates the RDF for specified pairs of atom groups and performs Boltzmann inversion to derive
+potential energy functions, which are useful for parameterizing interaction potentials in CG models.</p>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ObjectiveFunction.BottomUpObjectiveFunction.force_match_loss">
+<span class="sig-name descname"><span class="pre">force_match_loss</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cg_mdp_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fg_resname_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">begin_frame</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_frame</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skip_frame</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ObjectiveFunction.BottomUpObjectiveFunction.force_match_loss" title="Link to this definition"></a></dt>
+<dd><p>Calculates the force matching loss between FG and CG simulations for a range of frames.</p>
+<section id="id1">
+<h3>Parameters:<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>cg_mdp_file<span class="classifier">str</span></dt><dd><p>Path to the CG simulation parameter file (MDP file).</p>
+</dd>
+<dt>fg_resname_list<span class="classifier">list, optional</span></dt><dd><p>List of residue names to include in the force matching process, defaults to None (all residues).</p>
+</dd>
+<dt>begin_frame<span class="classifier">int, optional</span></dt><dd><p>The beginning frame for the force matching calculation, defaults to None (start from the first frame).</p>
+</dd>
+<dt>end_frame<span class="classifier">int, optional</span></dt><dd><p>The ending frame for the force matching calculation, defaults to None (end at the last frame).</p>
+</dd>
+<dt>skip_frame<span class="classifier">int, optional</span></dt><dd><p>The number of frames to skip between evaluations, defaults to None (no skipping).</p>
+</dd>
+</dl>
+</section>
+<section id="id2">
+<h3>Returns:<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>float</dt><dd><p>The mean force matching loss across the evaluated frames.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ObjectiveFunction.BottomUpObjectiveFunction.run_cg_simulation">
+<span class="sig-name descname"><span class="pre">run_cg_simulation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mdp_folder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial_gro</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fg_resname_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cg_simulation_folder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gpu_acceleration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">em_double_version</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">em</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">anneal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eq</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prod</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gpu_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ObjectiveFunction.BottomUpObjectiveFunction.run_cg_simulation" title="Link to this definition"></a></dt>
+<dd><p>Runs the CG simulation process, including energy minimization, annealing, equilibration, and production phases.</p>
+<section id="id3">
+<h3>Parameters:<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>mdp_folder<span class="classifier">str</span></dt><dd><p>Path to the folder containing the MDP files for different simulation stages.</p>
+</dd>
+<dt>initial_gro<span class="classifier">str, optional</span></dt><dd><p>Path to the initial GRO file for the simulation, if not provided, it will be generated.</p>
+</dd>
+<dt>fg_resname_list<span class="classifier">list, optional</span></dt><dd><p>List of residue names to include in the CG model, if not provided, all residues will be included.</p>
+</dd>
+<dt>index_file<span class="classifier">str, optional</span></dt><dd><p>Path to the index file for GROMACS simulation, if required.</p>
+</dd>
+<dt>cg_simulation_folder<span class="classifier">str, optional</span></dt><dd><p>Path to store the results of the CG simulation, a default folder will be created if not provided.</p>
+</dd>
+<dt>table_file<span class="classifier">str, optional</span></dt><dd><p>Path to the custom interaction table file for GROMACS, if required.</p>
+</dd>
+<dt>gpu_acceleration<span class="classifier">bool, optional</span></dt><dd><p>Whether to use GPU acceleration for the simulation, defaults to True.</p>
+</dd>
+<dt>em_double_version<span class="classifier">bool, optional</span></dt><dd><p>Whether to use double precision for the energy minimization step, defaults to True.</p>
+</dd>
+<dt>em<span class="classifier">bool, optional</span></dt><dd><p>Whether to perform energy minimization, defaults to True.</p>
+</dd>
+<dt>anneal<span class="classifier">bool, optional</span></dt><dd><p>Whether to perform annealing, defaults to True.</p>
+</dd>
+<dt>eq<span class="classifier">bool, optional</span></dt><dd><p>Whether to perform equilibration, defaults to True.</p>
+</dd>
+<dt>prod<span class="classifier">bool, optional</span></dt><dd><p>Whether to perform production, defaults to True.</p>
+</dd>
+<dt>nt<span class="classifier">int, optional</span></dt><dd><p>Number of threads to use for the simulation, defaults to 8.</p>
+</dd>
+<dt>gpu_id<span class="classifier">int, optional</span></dt><dd><p>GPU ID to use for the simulation, defaults to 0.</p>
+</dd>
+</dl>
+</section>
+<section id="id4">
+<h3>Notes:<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<p>This method sequentially runs the different stages of a GROMACS simulation process for a CG model, updating
+the class attributes with the paths to the final CG topology and trajectory files.</p>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ObjectiveFunction.BottomUpObjectiveFunction.update_opt_folder">
+<span class="sig-name descname"><span class="pre">update_opt_folder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_opt_folder</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ObjectiveFunction.BottomUpObjectiveFunction.update_opt_folder" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ObjectiveFunction.BottomUpObjectiveFunction.update_system_topology">
+<span class="sig-name descname"><span class="pre">update_system_topology</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_system_top</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ObjectiveFunction.BottomUpObjectiveFunction.update_system_topology" title="Link to this definition"></a></dt>
+<dd><p>Updates the system topology with new information and regenerates the CG topology file.</p>
+<section id="id5">
+<h3>Parameters:<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>new_system_top<span class="classifier">dict</span></dt><dd><p>The new system topology information.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="ObjectiveFunction.main.html" class="btn btn-neutral float-left" title="main" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../src/Optimization.html" class="btn btn-neutral float-right" title="Optimization" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Drep Zhong.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ComputeCGPropertiesFromFGSimulation &mdash; AMOFMS 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=eafc0fe6" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=8d563738"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ComputeCGPropertiesFromFGSimulation_All" href="CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation_All.html" />
+    <link rel="prev" title="wrap_coordinates" href="CGPropertiesFromFGSimulation.wrap_coordinates.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            AMOFMS
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../example.html">Example</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../API.html">API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../src/FGMappingToCG.html">FGMappingToCG</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../src/CGPropertiesFromFGSimulation.html">CGPropertiesFromFGSimulation</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../src/CGPropertiesFromFGSimulation.html#module-CGPropertiesFromFGSimulation">CGPropertiesFromFGSimulation Module</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../src/CGPropertiesFromFGSimulation.html#functions">Functions</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../src/CGPropertiesFromFGSimulation.html#classes">Classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../src/CGPropertiesFromFGSimulation.html#class-inheritance-diagram">Class Inheritance Diagram</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../src/CGForceFieldParameters.html">CGForceFieldParameters module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../src/ObjectiveFunction.html">ObjectiveFunction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../src/Optimization.html">Optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../src/tools.html">tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../src/DSPGM_MARTINI2.html">DSPGM_MARTINI2</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../authors.html">Authors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">CHANGELOG</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AMOFMS</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../API.html">API</a></li>
+          <li class="breadcrumb-item"><a href="../src/CGPropertiesFromFGSimulation.html">CGPropertiesFromFGSimulation</a></li>
+      <li class="breadcrumb-item active">ComputeCGPropertiesFromFGSimulation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="computecgpropertiesfromfgsimulation">
+<h1>ComputeCGPropertiesFromFGSimulation<a class="headerlink" href="#computecgpropertiesfromfgsimulation" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">CGPropertiesFromFGSimulation.</span></span><span class="sig-name descname"><span class="pre">ComputeCGPropertiesFromFGSimulation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">topology</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trajectory</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class for computing Coarse-Grained (CG) properties from Fine-Grained (FG) simulation data.</p>
+<section id="attributes">
+<h2>Attributes:<a class="headerlink" href="#attributes" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>topology<span class="classifier">str</span></dt><dd><p>Path to the topology file.</p>
+</dd>
+<dt>trajectory<span class="classifier">str</span></dt><dd><p>Path to the trajectory file.</p>
+</dd>
+<dt>cg_groups<span class="classifier">dict, optional</span></dt><dd><p>Definition of CG groups.</p>
+</dd>
+<dt>atom_num<span class="classifier">int, optional</span></dt><dd><p>Number of atoms per molecule.</p>
+</dd>
+<dt>mol_num<span class="classifier">int, optional</span></dt><dd><p>Number of molecules.</p>
+</dd>
+<dt>residue_name<span class="classifier">str, optional</span></dt><dd><p>Name of the residue to select atoms from.</p>
+</dd>
+<dt>universe<span class="classifier">MDAnalysis.Universe</span></dt><dd><p>The Universe object containing loaded simulation data.</p>
+</dd>
+</dl>
+</section>
+<section id="methods">
+<h2>Methods:<a class="headerlink" href="#methods" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>__init__(self, topology, trajectory)</dt><dd><p>Initializes the class with topology and trajectory files.</p>
+</dd>
+<dt>set_cg_groups(self, cg_groups, atom_num, mol_num, residue_name)</dt><dd><p>Sets CG groups and related properties.</p>
+</dd>
+<dt>extract_atoms_by_residue(self)</dt><dd><p>Extracts atoms based on the residue name.</p>
+</dd>
+<dt>compute_centroid(self, atom_group)</dt><dd><p>Computes the centroid of a given atom group.</p>
+</dd>
+<dt>compute_cg_bond_distribution(self, group1, group2)</dt><dd><p>Computes the distribution of distances between centroids of two CG groups.</p>
+</dd>
+<dt>compute_cg_angle_distribution(self, group1, group2, group3)</dt><dd><p>Computes the distribution of angles formed by centroids of three CG groups.</p>
+</dd>
+<dt>compute_cg_dihedral_distribution(self, group1, group2, group3, group4)</dt><dd><p>Computes the distribution of dihedrals formed by centroids of four CG groups.</p>
+</dd>
+<dt>plot_distribution(self, data, title, xlabel, ylabel)</dt><dd><p>Plots the distribution of a given data set.</p>
+</dd>
+<dt>compute_fg_group_force(self, fg_groups)</dt><dd><p>Computes forces on FG groups mapped to CG groups.</p>
+</dd>
+</dl>
+<p class="rubric">Methods Summary</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation.compute_centroid" title="CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation.compute_centroid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_centroid</span></code></a>(atom_group)</p></td>
+<td><p>Computes the centroid (center of mass) of a given atom group.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation.compute_cg_angle_distribution" title="CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation.compute_cg_angle_distribution"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_cg_angle_distribution</span></code></a>(group1, ...)</p></td>
+<td><p>Computes the distribution of angles formed by centroids of three CG groups.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation.compute_cg_bond_distribution" title="CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation.compute_cg_bond_distribution"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_cg_bond_distribution</span></code></a>(group1, group2)</p></td>
+<td><p>Computes the distribution of distances between centroids of two CG groups across the trajectory.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation.compute_cg_dihedral_distribution" title="CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation.compute_cg_dihedral_distribution"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_cg_dihedral_distribution</span></code></a>(group1, ...)</p></td>
+<td><p>Computes the distribution of dihedrals formed by centroids of four CG groups.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation.compute_fg_group_force" title="CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation.compute_fg_group_force"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_fg_group_force</span></code></a>(fg_groups)</p></td>
+<td><p>Computes forces on FG groups mapped to CG groups.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation.extract_atoms_by_residue" title="CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation.extract_atoms_by_residue"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_atoms_by_residue</span></code></a>()</p></td>
+<td><p>Extracts atoms by residue name from the loaded simulation data.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation.plot_distribution" title="CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation.plot_distribution"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_distribution</span></code></a>(data, title, xlabel, ylabel)</p></td>
+<td><p>Plots the distribution of a given data set using matplotlib.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation.set_cg_groups" title="CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation.set_cg_groups"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_cg_groups</span></code></a>(cg_groups, atom_num, mol_num, ...)</p></td>
+<td><p>Sets the CG groups and related properties for analysis.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods Documentation</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation.compute_centroid">
+<span class="sig-name descname"><span class="pre">compute_centroid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atom_group</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation.compute_centroid" title="Link to this definition"></a></dt>
+<dd><p>Computes the centroid (center of mass) of a given atom group.</p>
+<section id="parameters">
+<h3>Parameters:<a class="headerlink" href="#parameters" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>atom_group<span class="classifier">MDAnalysis.core.groups.AtomGroup</span></dt><dd><p>The atom group for which to compute the centroid.</p>
+</dd>
+</dl>
+</section>
+<section id="returns">
+<h3>Returns:<a class="headerlink" href="#returns" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>np.ndarray</dt><dd><p>A 3-element array containing the x, y, z coordinates of the centroid.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation.compute_cg_angle_distribution">
+<span class="sig-name descname"><span class="pre">compute_cg_angle_distribution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation.compute_cg_angle_distribution" title="Link to this definition"></a></dt>
+<dd><p>Computes the distribution of angles formed by centroids of three CG groups.</p>
+<section id="id1">
+<h3>Parameters:<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>group1<span class="classifier">int</span></dt><dd><p>Index of the first CG group.</p>
+</dd>
+<dt>group2<span class="classifier">int</span></dt><dd><p>Index of the second CG group.</p>
+</dd>
+<dt>group3<span class="classifier">int</span></dt><dd><p>Index of the third CG group.</p>
+</dd>
+</dl>
+</section>
+<section id="id2">
+<h3>Returns:<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>tuple</dt><dd><p>A tuple containing the mean angle, standard deviation, and a list of angles for each frame.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation.compute_cg_bond_distribution">
+<span class="sig-name descname"><span class="pre">compute_cg_bond_distribution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation.compute_cg_bond_distribution" title="Link to this definition"></a></dt>
+<dd><p>Computes the distribution of distances between centroids of two CG groups across the trajectory.</p>
+<section id="id3">
+<h3>Parameters:<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>group1<span class="classifier">int</span></dt><dd><p>Index of the first CG group.</p>
+</dd>
+<dt>group2<span class="classifier">int</span></dt><dd><p>Index of the second CG group.</p>
+</dd>
+</dl>
+</section>
+<section id="id4">
+<h3>Returns:<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>tuple</dt><dd><p>A tuple containing the mean distance, standard deviation, and a list of distances for each frame.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation.compute_cg_dihedral_distribution">
+<span class="sig-name descname"><span class="pre">compute_cg_dihedral_distribution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group4</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation.compute_cg_dihedral_distribution" title="Link to this definition"></a></dt>
+<dd><p>Computes the distribution of dihedrals formed by centroids of four CG groups.</p>
+<section id="id5">
+<h3>Parameters:<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>group1<span class="classifier">int</span></dt><dd><p>Index of the first CG group.</p>
+</dd>
+<dt>group2<span class="classifier">int</span></dt><dd><p>Index of the second CG group.</p>
+</dd>
+<dt>group3<span class="classifier">int</span></dt><dd><p>Index of the third CG group.</p>
+</dd>
+<dt>group4<span class="classifier">int</span></dt><dd><p>Index of the fourth CG group.</p>
+</dd>
+</dl>
+</section>
+<section id="id6">
+<h3>Returns:<a class="headerlink" href="#id6" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>tuple</dt><dd><p>A tuple containing the mean dihedral angle, standard deviation, and a list of dihedral angles for each frame.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation.compute_fg_group_force">
+<span class="sig-name descname"><span class="pre">compute_fg_group_force</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fg_groups</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation.compute_fg_group_force" title="Link to this definition"></a></dt>
+<dd><p>Computes forces on FG groups mapped to CG groups.</p>
+<section id="id7">
+<h3>Parameters:<a class="headerlink" href="#id7" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>fg_groups<span class="classifier">list</span></dt><dd><p>A list of FG groups for which to compute forces.</p>
+</dd>
+</dl>
+</section>
+<section id="id8">
+<h3>Returns:<a class="headerlink" href="#id8" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>np.ndarray</dt><dd><p>A numpy array containing the forces for each FG group across the trajectory.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation.extract_atoms_by_residue">
+<span class="sig-name descname"><span class="pre">extract_atoms_by_residue</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation.extract_atoms_by_residue" title="Link to this definition"></a></dt>
+<dd><p>Extracts atoms by residue name from the loaded simulation data.</p>
+<p>This method selects atoms based on the specified residue name attribute,
+facilitating further analysis such as computing centroids or distributions.</p>
+<section id="id9">
+<h3>Returns:<a class="headerlink" href="#id9" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>MDAnalysis.core.groups.AtomGroup</dt><dd><p>An AtomGroup containing all atoms with the specified residue name.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation.plot_distribution">
+<span class="sig-name descname"><span class="pre">plot_distribution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xlabel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylabel</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation.plot_distribution" title="Link to this definition"></a></dt>
+<dd><p>Plots the distribution of a given data set using matplotlib.</p>
+<section id="id10">
+<h3>Parameters:<a class="headerlink" href="#id10" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>data<span class="classifier">list or np.ndarray</span></dt><dd><p>The data set to plot.</p>
+</dd>
+<dt>title<span class="classifier">str</span></dt><dd><p>The title of the plot.</p>
+</dd>
+<dt>xlabel<span class="classifier">str</span></dt><dd><p>The label for the x-axis.</p>
+</dd>
+<dt>ylabel<span class="classifier">str</span></dt><dd><p>The label for the y-axis.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation.set_cg_groups">
+<span class="sig-name descname"><span class="pre">set_cg_groups</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cg_groups</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atom_num</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mol_num</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">residue_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation.set_cg_groups" title="Link to this definition"></a></dt>
+<dd><p>Sets the CG groups and related properties for analysis.</p>
+<section id="id11">
+<h3>Parameters:<a class="headerlink" href="#id11" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>cg_groups<span class="classifier">dict</span></dt><dd><p>Definition of CG groups.</p>
+</dd>
+<dt>atom_num<span class="classifier">int</span></dt><dd><p>Number of atoms per molecule.</p>
+</dd>
+<dt>mol_num<span class="classifier">int</span></dt><dd><p>Number of molecules.</p>
+</dd>
+<dt>residue_name<span class="classifier">str</span></dt><dd><p>Name of the residue to select atoms from.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="CGPropertiesFromFGSimulation.wrap_coordinates.html" class="btn btn-neutral float-left" title="wrap_coordinates" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="CGPropertiesFromFGSimulation.ComputeCGPropertiesFromFGSimulation_All.html" class="btn btn-neutral float-right" title="ComputeCGPropertiesFromFGSimulation_All" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Drep Zhong.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
