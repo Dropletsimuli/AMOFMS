@@ -4,7 +4,7 @@ AMOFMS
 
 .. start-description
 
-**an Automated Mapping and Optimization Framework for Multiscale Simulation**
+**An Automated Mapping and Optimization Framework for Multiscale Simulation**
 
 .. start-badges
 
